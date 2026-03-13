@@ -1,12 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+.sticker {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  padding: 0;
+}
+
 :root {
-  color: #ffffff;
-  background: #000000;
+  --color-black: #151515;
+  --color-white: #f3f3f3;
+  --color-black-rgb: 21 21 21;
+  --color-white-rgb: 243 243 243;
+
+  color: var(--color-white);
+  background: var(--color-black);
   font-family:
-    "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+    'Source Code Pro', monospace;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -25,8 +38,8 @@ body {
   margin: 0;
   min-width: 320px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 28%),
-    #000;
+    linear-gradient(180deg, rgb(var(--color-white-rgb) / 0.06), transparent 28%),
+    var(--color-black);
 }
 
 button,
@@ -39,6 +52,6 @@ input {
 }
 
 ::selection {
-  background: #ffffff;
-  color: #000000;
+  background: var(--color-white);
+  color: var(--color-black);
 }

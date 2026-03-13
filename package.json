@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "async-source": "^2.0.3",
     "vue": "^3.5.30"
   },
   "devDependencies": {
