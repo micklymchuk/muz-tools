@@ -1,6 +1,8 @@
 <script setup>
+import ToolSectionLayout from './ToolSectionLayout.vue'
 import BaseButton from './ui/BaseButton.vue'
 import BaseInput from './ui/BaseInput.vue'
+import WarnText from './ui/WarnText.vue'
 
 defineProps({
   url: {
@@ -37,12 +39,16 @@ const emit = defineEmits(['update:url', 'submit'])
 </script>
 
 <template>
-  <p class="text-sm sticker uppercase inline-block mb-6">YouTube to WAV converter</p>
-  <section class="w-full border border-white/15 p-4 sm:p-6">
-    <div class="mx-auto max-w-3xl">
+  <ToolSectionLayout title="YouTube to WAV converter">
+    <div>
       <p class="text-sm text-white/70 uppercase">
         Paste a YouTube link and download the audio as a WAV file.
       </p>
+
+      <WarnText class="mt-4">
+        Use downloaded audio only when you have the rights, permission, or a license
+        to do so.
+      </WarnText>
 
       <form class="mt-6 flex flex-col gap-4 sm:flex-row" @submit.prevent="emit('submit')">
         <BaseInput
@@ -68,5 +74,5 @@ const emit = defineEmits(['update:url', 'submit'])
         {{ errorMessage }}
       </p>
     </div>
-  </section>
+  </ToolSectionLayout>
 </template>

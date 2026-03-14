@@ -15,7 +15,7 @@ const {
 </script>
 
 <template>
-  <div class="flex flex-1 flex-col items-start justify-center">
+  <div class="flex flex-1 flex-col items-start justify-center py-6">
     <SimpleConverter
       v-model:url="url"
       :is-youtube-url="isYoutubeUrl"

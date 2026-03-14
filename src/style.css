@@ -4,10 +4,25 @@
 @tailwind components;
 @tailwind utilities;
 
-.sticker {
-  background-color: var(--color-white);
-  color: var(--color-black);
-  padding: 0;
+@layer components {
+  .sticker {
+    @apply inline-flex items-center justify-center whitespace-nowrap bg-white px-0 text-black transition hover:bg-gray-300;
+  }
+
+  .sticker-secondary {
+    @apply inline-flex items-center justify-center whitespace-nowrap bg-gray-300 px-0 text-black transition hover:bg-white;
+  }
+}
+
+@layer utilities {
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 :root {
@@ -15,6 +30,7 @@
   --color-white: #f3f3f3;
   --color-black-rgb: 21 21 21;
   --color-white-rgb: 243 243 243;
+  --app-header-height: 3.75rem;
 
   color: var(--color-white);
   background: var(--color-black);
